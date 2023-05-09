@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .box {
+    width: 200px;
+    height: 200px;
+
+  }
+</style>
+
+
+<body>
+
+
+  <div class="box"></div>
+  <button class="btn">인증번호전송</button>
+
+</body>
+
+<script>
+  const box = document.querySelector('.box');
+  const btn = document.querySelector('.btn');
+
+  btn.addEventListener('click', () => {
+
+    const span = document.createElement('span');
+    span.textContent = `0000000`;
+    document.body.appendChild(span);
+    setInterval(function () {
+      if (time >= 0) {
+
+        minute = Math.floor(time / 60);
+        second = String(time % 60).padStart(2, '0');
+        time = time - 1;
+        box.textContent = `${minute}: ${second}`;
+      }
+    }, 1000)
+
+  })
+  let time = 180;
+  let minute = 0;
+  let second = 0;
+</script>
+
+
+
+
+</html>

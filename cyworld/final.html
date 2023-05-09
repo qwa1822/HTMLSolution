@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style/final.css">
+  <script defer src="./js/fincs.js"></script>
+</head>
+
+<body>
+
+
+
+  <div class="wrapper">
+
+    <div class="header">
+
+      <h2 class="header__title">코드캠프 회원가입</h2>
+    </div>
+
+    <div class="wrapper__body">
+      <div class="body__top_menu">
+        <input placeholder="이메일을 입력해 주세요 " type="text">
+        <input placeholder="이름을 입력해 주세요" type="text">
+        <input placeholder="비밀번호를 입력해주세요" type="text">
+        <input placeholder="비밀번호를 다시 입력해주세요" type="text">
+      </div>
+      <div class="body__bottom_menu">
+        <input id="phone_one" oninput="clickedFocus()" maxlength="3" type="text">-
+        <input id="phone_two" oninput="clickedFocus()" maxlength="4" type="text">-
+        <input id="phone_three" oninput="clickedFocus()" maxlength="4" type="text">
+      </div>
+
+
+      <div class="authentication">
+        <span class="authen__1"></span>
+        <button onclick="clickedChange()" class="btn1" disabled="true">인증번호 전송</button>
+      </div>
+
+      <div class="authentication2">
+        <span class="authen__2"></span>
+        <button class="btn2" disabled="true">인증완료
+
+        </button>
+      </div>
+
+
+
+      <select name="pets" id="pet-select">
+        <option class="option__1" value="">지역을 선택하세요...!</option>
+        <option value="seoul">서울</option>
+        <option value="inchoen">인천</option>
+        <option value="경기">경기</option>
+      </select>
+
+      <div class="radio_btn">
+        <label>
+          <input type="radio" name="male" value="male">
+          여성
+        </label>
+        <label>
+          <input type="radio" name="male" value="man">
+          남성
+        </label>
+
+      </div>
+
+
+      <div class="divide__line"></div>
+
+
+      <button disabled="true" class="member__join">가입하기</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
